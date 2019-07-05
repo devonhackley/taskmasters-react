@@ -2,12 +2,20 @@ import React, {useState, useEffect} from 'react';
 import Description from './taskDescription';
 import mockTasks from '../assets/mockTasks.json';
 
+const API_URL = 'http://taskmaster-env.vnw2wvs5gu.us-east-2.elasticbeanstalk.com/tasks';
 function Tasks(){
   const [tasks, setTasks] = useState([]);
 
   const _getTasks = () => {
-     setTasks(mockTasks);
-
+    //  setTasks(mockTasks);
+    fetch(`https://cors-anywhere.herokuapp.com/${API_URL}`)
+    .then( data => data.json() )
+    .then( allTasks => setTasks(allTasks) )
+    .catch(() => {
+      // set dummy tasks
+      setTasks(mockTasks);
+      console.error();
+    });
   }
 
   useEffect(_getTasks, []);
@@ -18,8 +26,7 @@ function Tasks(){
         <li key={task.id}>
           <details>
             <summary>
-              <span>{task.title}</span>
-              {/* <span className="task-status" id={task.id} onClick={_changeStatus}>{task.status}</span> */}
+              <span>{!task.title ? 'Task Title' : task.title}</span>
             </summary>
             <Description task={task} />
           </details>

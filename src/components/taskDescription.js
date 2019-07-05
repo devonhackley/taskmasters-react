@@ -9,7 +9,8 @@ function Description(props) {
     <section>
         <div key={task.id}>
           <span>Assigned To: {task.assignee}</span>
-          <span>{task.description}</span>
+          <br></br>
+          <span>{!task.description ? 'Task description goes here' : task.description }</span>
         </div>
     </section>
   )
