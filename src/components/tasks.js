@@ -8,6 +8,7 @@ function Tasks(){
 
   const _getTasks = () => {
     //  setTasks(mockTasks);
+    //Helpful Resource: https://github.com/Rob--W/cors-anywhere/#documentation
     fetch(`https://cors-anywhere.herokuapp.com/${API_URL}`)
     .then( data => data.json() )
     .then( allTasks => setTasks(allTasks) )
