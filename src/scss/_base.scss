@@ -2,4 +2,10 @@ body {
   font-family: $font_family;
   background-color:$light_grey;
   overflow-x: hidden;
+  padding: $std_padding;
+}
+
+li {
+  letter-spacing: $std_padding;
+  padding: $std_padding;
 }

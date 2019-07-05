@@ -12,7 +12,6 @@ function App() {
         </section>
         <Tasks />
       </main>
-      {/* <Footer /> */}
     </>
   );
 }
