@@ -7,6 +7,9 @@ function App() {
     <>
       <header>TaskMaster</header>
       <main>
+        <section>
+         <p>This is a list of tasks. Click each to toggle it's status</p>
+        </section>
         <Tasks />
       </main>
       {/* <Footer /> */}
