@@ -7,7 +7,7 @@ function Tasks(){
   const [tasks, setTasks] = useState([]);
 
   const _getTasks = () => {
-    //  setTasks(mockTasks);
+     //setTasks(mockTasks);
     //Helpful Resource: https://github.com/Rob--W/cors-anywhere/#documentation
     fetch(`https://cors-anywhere.herokuapp.com/${API_URL}`)
     .then( data => data.json() )

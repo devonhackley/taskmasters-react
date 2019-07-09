@@ -3,7 +3,7 @@
 **Author**: Devon Hackley
 **Version**: 1.0.0
 
-**Depolyed Site**: 
+**Deployed Site**: http://taskuploads.s3-website-us-west-2.amazonaws.com/
 
 ## Overview
 React Application that displays tasks and can toggle each task.
