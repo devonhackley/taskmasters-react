@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Description from './taskDescription';
 import mockTasks from '../assets/mockTasks.json';
 
-const API_URL = 'http://taskmaster-env.vnw2wvs5gu.us-east-2.elasticbeanstalk.com/tasks';
+const API_URL = 'http://taskmaster2.us-west-2.elasticbeanstalk.com/';
 function Tasks(){
   const [tasks, setTasks] = useState([]);
 
